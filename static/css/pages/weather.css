@@ -1,0 +1,282 @@
+/** header stylesheet **/
+#header {
+  margin-left: 20px;
+  position: relative;
+  top: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#header .top {
+  position: relative;
+  left: 25px;
+}
+#header .top > span {
+  font-size: 20px;
+}
+
+#header .bottom {
+  position: relative;
+  bottom: 15px;
+}
+#header .bottom > img {
+  width: 100px;
+}
+#header .bottom > b {
+  font-size: 50px;
+  position: relative;
+  right: 12px;
+  bottom: 35px;
+}
+
+/** container stylesheet **/
+#container {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#container > .top #important {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 50px;
+  align-items: center;
+  width: 1100px;
+}
+#container > .top #important > .left span {
+  font-size: 60px;
+}
+#container > .top #important > .right {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+}
+#container > .top #important > .right img {
+  width: 100px;
+}
+#container > .top #important > .right span {
+  font-size: 30px;
+  color: #b8000a;
+}
+
+#container > .top #support {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  align-items: center;
+}
+#container > .top #support > .left img {
+  width: 260px;
+  height: 260px;
+}
+
+#container > .top #support > .right {
+  margin-top: 45px;
+  display: grid;
+  grid-template-rows: auto 1fr 10%;
+  grid-row-gap: 15px;
+}
+
+#container > .top #support > .right > .top span.description {
+  font-size: 40px;
+  color: #0059df;
+}
+#container > .top #support > .right > .top span.offer {
+  font-size: 14px;
+}
+
+#container > .top #support > .right > .bottom {
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-left: 10px solid #d79100;
+}
+#container > .top #support > .right > .bottom > span {
+  display: block;
+  font-size: 30px;
+}
+
+#container > .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#container > .bottom > div:not(:last-of-type) {
+  margin-right: 32px;
+}
+#container > .bottom #chart {
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid #d79100;
+  border-radius: 48px;
+  display: grid;
+  align-items: center;
+  height: 350px;
+}
+#container > .bottom #chart span {
+  font-size: 25px;
+}
+#container > .bottom #chart canvas {
+  width: 600px;
+}
+#container > .bottom #forcast {
+  padding-top: 20px;
+  border: 1px solid #d79100;
+  border-radius: 54px;
+  width: 400px;
+  height: 350px;
+}
+#container > .bottom #forcast > .top {
+  margin-left: 20px;
+  padding-top: 20px;
+}
+#container > .bottom #forcast > .top span {
+  font-size: 25px;
+  color: #d79100;
+}
+#container > .bottom #forcast > .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#container > .bottom #forcast > .bottom #atmosphere {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+#container > .bottom #forcast > .bottom #atmosphere img {
+  width: 200px;
+  height: 200px;
+}
+#container > .bottom #forcast > .bottom #atmosphere span {
+  color: #0059df;
+  font-size: 40px;
+}
+#container > .bottom #forcast > .bottom #weather_digit > span {
+  font-size: 40px;
+}
+#container > .bottom #forcast > .bottom #weather_digit span#tm_tmp_min {
+  color: #0059df;
+}
+#container > .bottom #forcast > .bottom #weather_digit span#tm_tmp_max {
+  color: #b8000a;
+}
+
+/** floatingButton **/
+#floatingButton {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+}
+#floatingButton > .top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+#floatingButton > .top .left {
+  border: 3px solid #f7c96a;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 233, 110, 0.15);
+  cursor: pointer;
+}
+#floatingButton > .top .left span.ico_appbar {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -48px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#floatingButton > .top .right > span {
+  font-size: 30px;
+  color: #f7c96a;
+}
+
+#floatingButton > .bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+#floatingButton > .bottom span#ico_down {
+  margin-left: 2px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -95px -76px;
+  background-size: 220px 220px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 233, 110, 0.2);
+  visibility: hidden;
+}
+#floatingButton > .bottom #dropdown span {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#floatingButton > .bottom #dropdown span#ico_home {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px 0px;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_weather {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -48px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_sports {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -40px -75px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_news {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -80px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_settings {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -46px -8px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>모닝 - 스포츠</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/defaults.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/pages/sports.css')}}" />
+    <link rel="shortcut icon" href="/static/favicon.ico" />
+    <script src="/static/js/sports_get.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="top">
+            <span>당신의 상쾌한 하루</span>
+        </div>
+        <div class="bottom">
+            <img src="/static/icons/weather_clear.png" />
+            <b>모닝</b>
+        </div>
+    </div>
+    <div id="container">
+        <div class="left">
+            <div id="kbo_league">
+                <div class="top">
+                    <img src="/static/icons/kbo.png" />
+                    <span class="title">프로야구</span>
+                </div>
+                <div class="bottom">
+                    <div id="pending_kbo" class="pending"></div>
+                    <table id="kbo_table">
+                        <thead>
+                            <th width="120px"></th>
+                            <th width="50px">승</th>
+                            <th width="50px">패</th>
+                            <th width="50px">무</th>
+                            <th width="50px">승률</th>
+                            <th width="50px">게임 차</th>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div id="premier_league">
+                <div class="top">
+                    <img src="/static/icons/premier.png" />
+                    <span class="title">프리미어리그</span>
+                </div>
+                <div class="bottom">
+                    <div id="pending_pre" class="pending"></div>
+                    <div id="pre_none" class="none"></div>
+                    <div id="pre_table">
+                        
+                    </div>
+                </div>
+            </div>
+            <div id="k_league">
+                <div class="top">
+                    <img src="/static/icons/k-league.png" />
+                    <span class="title">K리그</span>
+                </div>
+                <div class="bottom">
+                    <div id="pending_ksp" class="pending"></div>
+                    <div id="ksp_none" class="none"></div>
+                    <div id="ksp_table">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="floatingButton">
+        <div class="top">
+            <div class="left" id="dropMainButton">
+                <span class="ico_appbar"></span>
+            </div>
+            <div class="right">
+                <span class="index">스포츠</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <span id="ico_down"></span>
+            <div id="dropdown">
+                <span id="ico_home"></span>
+                <span id="ico_weather"></span>
+                <span id="ico_news"></span>
+                <span id="ico_settings"></span>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/dropbar.js"></script>
+</body>
+
+</html>

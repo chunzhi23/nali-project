@@ -1,0 +1,347 @@
+/** header stylesheet **/
+#header {
+  margin-left: 20px;
+  position: relative;
+  top: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#header .top {
+  position: relative;
+  left: 25px;
+}
+#header .top > span {
+  font-size: 20px;
+}
+
+#header .bottom {
+  position: relative;
+  bottom: 15px;
+}
+#header .bottom > img {
+  width: 100px;
+}
+#header .bottom > b {
+  font-size: 50px;
+  position: relative;
+  right: 12px;
+  bottom: 35px;
+}
+
+/** container stylesheet **/
+#container {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#container > .top {
+  display: flex;
+  flex-direction: row;
+}
+#container > .top #greeting {
+  margin-right: 80px;
+  width: 355px;
+}
+#container > .top #greeting > span {
+  font-size: 35px;
+}
+#container > .top #greeting #time > span.text {
+  font-size: 120px;
+}
+#container > .top #greeting #time > #colon {
+  visibility: visible;
+}
+#container > .top #greeting #time > span.suffix {
+  margin-left: 25px;
+  font-size: 50px;
+}
+
+#container > .top .inform {
+  padding-right: 30px;
+  border: 1px solid #f7c96a;
+  border-radius: 64px;
+  width: 700px;
+  height: 200px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#container > .top .inform > img {
+  position: relative;
+  bottom: 20px;
+  width: 250px;
+  grid-column-gap: 35px;
+}
+#small_settings {
+  position: relative;
+  bottom: 30px;
+}
+#small_settings span.empha {font-size: 60px;}
+#small_settings span.dawn {color: #397175;}
+#small_settings span.noon {color: #d79100;}
+#small_settings span.afternoon {color: #5b3975;}
+#small_settings span.night {color: #000000;}
+#small_settings span.text {font-size: 35px;}
+
+#small_settings span.on {color: #cf1f1f;}
+#small_settings span.on::after {content: "ON";}
+#small_settings span.off {color: #0059df;}
+#small_settings span.off::after {content: "OFF";}
+#container > .top .inform > b {
+  position: relative;
+  bottom: 20px;
+  font-size: 50px;
+}
+
+#container > .bottom {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+}
+#container > .bottom > div:not(:last-of-type) {
+  margin-right: 32px;
+}
+#container > .bottom div:not(:first-of-type) > .top {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+}
+#container > .bottom div:not(:first-of-type) > .top span.title {
+  margin-top: 10px;
+  font-size: 30px;
+  color: #d79100;
+}
+
+#container > .bottom #weather {
+  padding-top: 20px;
+  border: 1px solid #f7c96a;
+  border-radius: 64px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 430px;
+  height: 450px;
+}
+#container > .bottom #weather > .top {
+  display: flex;
+  flex-direction: row;
+}
+#container > .bottom #weather > .top img {
+  position: relative;
+  right: 20px;
+  width: 300px;
+  height: 300px;
+}
+#container > .bottom #weather > .top .inform {
+  margin-top: 40px;
+  position: relative;
+  right: 30px;
+  width: 100px;
+}
+#container > .bottom #weather > .top .inform span {
+  display: block;
+}
+#container > .bottom #weather > .top .inform span#city {
+  color: #d79100;
+  font-size: 40px;
+}
+#container > .bottom #weather > .top .inform span#town {
+  font-size: 20px;
+}
+#container > .bottom #weather > .top .inform span#status {
+  margin-top: 20px;
+  color: #0059df;
+  font-size: 40px;
+}
+#container > .bottom #weather > .bottom span {
+  overflow: hidden;
+  position: relative;
+  line-height: 1.2em;
+  max-height: 2.4em;
+  margin-right: -1em;
+  padding-right: 1em;
+  font-size: 60px;
+}
+#container > .bottom #news {
+  padding-top: 20px;
+  border: 1px solid #f7c96a;
+  border-radius: 64px;
+  width: 350px;
+}
+#container > .bottom #news > .top span.ico_news {
+  display: inline-block;
+  width: 100px;
+  height: 80px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -200px;
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+}
+#container > .bottom #news > .bottom {
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#container > .bottom #news > .bottom ul.title:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+#container > .bottom #news > .bottom ul.title > li {
+  font-size: 20px;
+}
+#container > .bottom #news > .bottom ul.subtitle {
+  margin-top: 5px;
+  color: #999999;
+}
+#container > .bottom #news > .bottom ul.subtitle > li {
+  overflow: hidden;
+  position: relative;
+  line-height: 1.2em;
+  max-height: 2.9em;
+  margin-right: -1em;
+  padding-right: 1em;
+  font-size: 14px;
+}
+#container > .bottom #news > .bottom ul.subtitle > li > span {
+  line-height: 1.5em;
+}
+#container > .bottom > .right {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-row-gap: 25px;
+  width: 310px;
+}
+#adsense {
+  border: 1px solid #f7c96a;
+  border-radius: 35px;
+}
+#mirror {
+  border: 1px solid #f7c96a;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#mirror img {width: 70px;}
+#mirror span {font-size: 30px;}
+#mirror span::after {content: " >>";}
+
+/** floatingButton **/
+#floatingButton {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+}
+#floatingButton > .top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#floatingButton > .top .left {
+  border: 3px solid #f7c96a;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 233, 110, 0.15);
+  cursor: pointer;
+}
+#floatingButton > .top .left span.ico_appbar {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px 0px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#floatingButton > .top .right > span {
+  font-size: 30px;
+  color: #f7c96a;
+}
+
+#floatingButton > .bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#floatingButton > .bottom span#ico_down {
+  margin-left: 2px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -95px -76px;
+  background-size: 220px 220px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 233, 110, 0.2);
+  visibility: hidden;
+}
+#floatingButton > .bottom #dropdown span {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#floatingButton > .bottom #dropdown span#ico_home {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px 0px;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_weather {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -48px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_sports {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -40px -75px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_news {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -80px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_settings {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -46px -8px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}

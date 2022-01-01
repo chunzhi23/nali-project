@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모닝 - 홈</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/defaults.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/pages/home.css')}}">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/time.js"></script>
+    <script src="/static/js/location.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9223045431964395"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="top">
+            <span>당신의 상쾌한 하루</span>
+        </div>
+        <div class="bottom">
+            <img src="/static/icons/weather_clear.png">
+            <b>모닝</b>
+        </div>
+    </div>
+    <div id="container">
+        <div class="top">
+            <div id="greeting">
+                <span>안녕하세요, {{usrn}}님</span>
+                <div id="time">
+                    <span class="text" id="h"></span>
+                    <span class="text" id="colon">:</span>
+                    <span class="text" id="m"></span>
+                    <span class="suffix"></span>
+                </div>
+            </div>
+            <div class="inform">
+                <img id="ico_time" src>
+                <div id="small_settings">
+                    <div>
+                        <span class="empha"></span>
+                        <span class="text">입니다!</span>
+                    </div>
+                    <div>
+                        <span class="text">알람</span>
+                        <span class="text off" id="onoff"></span>
+                    </div>
+                </div>
+                <b id="d"></b>
+            </div>
+        </div>
+        <div class="bottom">
+            <div id="weather">
+                <div class="top">
+                    <img id="ico_weather">
+                    <div class="inform">
+                        <span id="city"></span>
+                        <span id="town"></span>
+                        <span id="status"></span>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <span id="th">12℃ / 87%</span>
+                </div>
+            </div>
+            <div id="news">
+                <div class="top">
+                    <span class="ico_news"></span>
+                    <span class="title">뉴스</span>
+                </div>
+                <div id="news_feed" class="bottom">
+                    <div id="pending_news" class="pending"></div>
+                </div>
+            </div>
+            <script src="/static/js/news_get.js"></script>
+            <div class="right">
+                <div id="adsense">
+
+                </div>
+                <div id="mirror">
+                    <img src="/static/icons/mirror.png">
+                    <span>거울 보기</span>
+                </div>
+                <script>
+                    document.getElementById("mirror")
+                    .addEventListener("click", function(){
+                        location.href = "/mirror";
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+    <div id="floatingButton">
+        <div class="top">
+            <div class="left" id="dropMainButton">
+                <span class="ico_appbar"></span>
+            </div>
+            <div class="right">
+                <span class="index">홈</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <span id="ico_down"></span>
+            <div id="dropdown">
+                <span id="ico_weather"></span>
+                <span id="ico_sports"></span>
+                <span id="ico_news"></span>
+                <span id="ico_settings"></span>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/dropbar.js"></script>
+</body>
+</html>

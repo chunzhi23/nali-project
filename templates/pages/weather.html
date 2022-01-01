@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모닝 - 날씨</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/defaults.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/pages/weather.css')}}">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/chart.js"></script> 
+    <script src="/static/js/location.js"></script>
+    <script src="/static/js/weather_chart.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="top">
+            <span>당신의 상쾌한 하루</span>
+        </div>
+        <div class="bottom">
+            <img src="/static/icons/weather_clear.png">
+            <b>모닝</b>
+        </div>
+    </div>
+    <div id="container">
+        <div class="top">
+            <div id="important">
+                <div class="left">
+                    <span id="datetime">2021년 11월 9일 (화)</span>
+                </div>
+                <div class="right">
+                    <img src="/static/icons/location.png">
+                    <span class="text">
+                        <span id="town"></span>,
+                        <span id="city"></span>
+                    </span>
+                </div>
+            </div>
+            <div id="support">
+                <div class="left">
+                    <img id="ico_weather">
+                </div>
+                <div class="right">
+                    <div class="top">
+                        <span class="description">
+                            현재: <span id="status"></span>
+                        </span>
+                        <span class="offer">from
+                            <a href="https://openweathermap.org/" target="_blank">openweathermap.org</a>
+                        </span>
+                    </div>
+                    <div class="bottom">
+                        <span class="text">
+                            현재 온도 :
+                            <span id="temperature"></span>
+                        </span>
+                        <span class="text">
+                            현재 습도 :
+                            <span id="humidity"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div id="chart">
+                <span class="text">시간대별 날씨</span>
+                <canvas id="weather_chart"></canvas>
+            </div>
+            <div id="forcast">
+                <div class="top">
+                    <span class="title">내일의 날씨</span>
+                </div>
+                <div class="bottom">
+                    <div id="atmosphere">
+                        <img id="ico_tm_weather">
+                        <span id="tm_status" class="text"></span>
+                    </div>
+                    <div id="weather_digit">
+                        <span class="text">
+                            <span class="tm_tmp">
+                                <span id="tm_tmp_min"></span>
+                                <span id="tm_tmp_max"></span>
+                            </span>
+                            /
+                            <span id="tm_humidity"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="floatingButton">
+        <div class="top">
+            <div class="left" id="dropMainButton">
+                <span class="ico_appbar"></span>
+            </div>
+            <div class="right">
+                <span class="index">날씨</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <span id="ico_down"></span>
+            <div id="dropdown">
+                <span id="ico_home"></span>
+                <span id="ico_sports"></span>
+                <span id="ico_news"></span>
+                <span id="ico_settings"></span>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/dropbar.js"></script>
+</body>
+</html>

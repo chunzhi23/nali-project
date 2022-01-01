@@ -1,0 +1,51 @@
+/* header stylesheet */
+#header {
+  margin-top: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#header .top {
+  position: relative;
+  right: 60px;
+}
+#header .top span {
+  font-size: 45px;
+}
+#header .bottom {
+  position: relative;
+  right: 30px;
+  bottom: 60px;
+}
+#header .bottom img {
+  width: 320px;
+}
+#header .bottom b {
+  font-size: 150px;
+  position: relative;
+  right: 50px;
+  bottom: 120px;
+}
+
+/** container stylesheet **/
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#container .time > span.text {
+  font-size: 120px;
+}
+#container .time > #colon {
+  visibility: visible;
+}
+#container .time > span.suffix {
+  margin-left: 25px;
+  font-size: 50px;
+}
+#container span.message {
+  font-size: 45px;
+  color: #d79100;
+}

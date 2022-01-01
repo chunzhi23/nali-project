@@ -1,0 +1,270 @@
+/** header stylesheet **/
+#header {
+  margin-left: 20px;
+  position: relative;
+  top: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#header .top {
+  position: relative;
+  left: 25px;
+}
+#header .top > span {
+  font-size: 20px;
+}
+
+#header .bottom {
+  position: relative;
+  bottom: 15px;
+}
+#header .bottom > img {
+  width: 100px;
+}
+#header .bottom > b {
+  font-size: 50px;
+  position: relative;
+  right: 12px;
+  bottom: 35px;
+}
+
+/** container stylesheet **/
+#container {
+  margin-top: 30px;
+  margin-left: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+#container > .left {
+  margin-right: 32px;
+}
+#container > .left #news {
+  border: 1px solid #d79100;
+  border-radius: 36px;
+  width: 720px;
+  height: 640px;
+}
+#container > .left #news > .top {
+  padding-top: 20px;
+  padding-left: 20px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+}
+#container > .left #news > .top img {
+  margin-right: 10px;
+  width: 60px;
+}
+#container > .left #news > .top span {
+  font-size: 30px;
+  color: #d79100;
+}
+#news_detail {
+  margin-top: 20px;
+  padding: 0px 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#news_detail > ul.title:not(:last-of-type) {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #999999;
+}
+#news_detail > ul.title > li {
+  margin-bottom: 5px;
+}
+#news_detail > ul.title li {
+  font-size: 20px;
+}
+#news_detail > ul.title > ul.subtitle > li {
+  overflow: hidden;
+  position: relative;
+  line-height: 1.2em;
+  max-height: 4.6em;
+  margin-right: -1em;
+  padding-right: 1em;
+  font-size: 14px;
+}
+#news_detail > ul.title > ul.subtitle > li > span {
+  line-height: 1.5em;
+}
+#container > .right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#container > .right > div {
+  border: 1px solid #d79100;
+  border-radius: 36px;
+  width: 460px;
+}
+#container > .right > div:not(:last-of-type) {
+  margin-bottom: 28px;
+}
+#container > .right > div > .top {
+  padding-top: 20px;
+  padding-left: 20px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+}
+#container > .right > div > .top img {
+  margin-right: 10px;
+  width: 60px;
+}
+#container > .right > div > .top span {
+  font-size: 30px;
+  color: #d79100;
+}
+#stocks > .bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#stock_table td {padding: 6px 0px;}
+#stock_table td:not(:first-of-type) {text-align: center;}
+#stock_table td:nth-child(1) {font-size: 21px;}
+
+#stock_table td.red {color: #de1515;}
+#stock_table td.red:last-of-type::before {content: "▲ ";}
+
+#stock_table td.blue {color: #156ade;}
+#stock_table td.blue:last-of-type::before {content: "▼ ";}
+
+#stock_table td.default {color: #555555;}
+#stock_table td.default:last-of-type::before {content: "- ";}
+
+#confirmed > .bottom {
+  margin-top: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#confirmed > .bottom > span {display: block;}
+#confirmed > .bottom #data {
+  font-size: 100px;
+  color: #b8000a;
+}
+
+/** floatingButton **/
+#floatingButton {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+}
+#floatingButton > .top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+#floatingButton > .top .left {
+  border: 3px solid #f7c96a;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 233, 110, 0.15);
+  cursor: pointer;
+}
+#floatingButton > .top .left span.ico_appbar {
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -80px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#floatingButton > .top .right > span {
+  font-size: 30px;
+  color: #f7c96a;
+}
+
+#floatingButton > .bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+#floatingButton > .bottom span#ico_down {
+  margin-left: 2px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -95px -76px;
+  background-size: 220px 220px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 233, 110, 0.2);
+  visibility: hidden;
+}
+#floatingButton > .bottom #dropdown span {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#floatingButton > .bottom #dropdown span#ico_home {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px 0px;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_weather {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -48px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_sports {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -40px -75px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_news {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -80px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_settings {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -46px -8px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}

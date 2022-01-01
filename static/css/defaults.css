@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "NanumBarunpenB";
+  src: url("../fonts/NanumBarunpenB.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/NanumBarunpenB.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/NanumBarunpenB.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: "NanumBarunpenR";
+  src: url("../fonts/NanumBarunpenR.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/NanumBarunpenR.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/NanumBarunpenR.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'KoPubDotumMedium';
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  min-width: 1040px;
+  font-family: "NanumBarunpenR", sans-serif;
+  user-select: none;
+}
+a.plain {text-decoration: none;}
+input, button {font-family: "NanumBarunpenR", sans-serif;}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: "KoPubDotumMedium", sans-serif;
+}
+table {border-collapse: collapse;}
+.pending {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #3498db; /* Blue */
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  width: 25px;
+  height: 25px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신의 상쾌한 하루 - 모닝</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/defaults.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/interfaces/register.css')}}">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <script src="/static/js/register.js"></script>
+</head>
+<body>
+    <div id="cover">
+        <div class="background"></div>
+    </div>
+    <div id="header">
+        <div class="top">
+            <span>당신의 상쾌한 하루</span>
+        </div>
+        <div class="bottom">
+            <img src="/static/icons/weather_clear.png">
+            <b>모닝</b>
+        </div>
+    </div>
+    <div id="container">
+        <form action="/register_proc" onsubmit="return validateForm()" method="post">
+            <div>
+                <label for="id">ID</label>
+                <input type="text" id="id" name="id">
+                <img id="status_id">
+            </div>
+            <div>
+                <label for="pw">PW</label>
+                <input type="password" id="pw" name="pw">
+                <img id="status_pw">
+            </div>
+            <div>
+                <label for="pwChk">PW 확인</label>
+                <input type="password" id="pwChk" name="pwChk">
+                <img id="status_pwChk">
+            </div>
+            <div>
+                <label for="name">닉네임</label>
+                <input type="text" id="name" name="name"> 
+                <img id="status_nm">
+            </div>
+            <button type="submit">회원가입</button>
+        </form>
+    </div>
+</body>
+</html>

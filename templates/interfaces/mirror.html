@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모닝 - 거울</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/defaults.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/interfaces/mirror.css')}}">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <script src="/static/js/time.js"></script>
+</head>
+<body>
+    <div id="cover"></div>
+    <div id="header">
+        <div class="top">
+            <span>당신의 상쾌한 하루</span>
+        </div>
+        <div class="bottom">
+            <img src="/static/icons/weather_clear.png">
+            <b>모닝</b>
+        </div>
+    </div>
+    <div id="container">
+        <div class="left">
+            <div id="mirror">
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="prominent">
+                <div id="icon">
+                    <img src="/static/icons/mirror.png">
+                    <span>거울</span>
+                </div>
+                <div id="time">
+                    <span class="text" id="h"></span>
+                    <span class="text" id="colon">:</span>
+                    <span class="text" id="m"></span>
+                    <span class="suffix"></span>
+                </div>
+            </div>
+            <div id="goback" class="prominent">
+                <span>돌아가기</span>
+            </div>
+            <script>
+                document.getElementById("goback")
+                .addEventListener("click", function(){
+                    location.href = document.referrer;
+                });
+                </script>
+        </div>
+    </div>
+</body>
+</html>

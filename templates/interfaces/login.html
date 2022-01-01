@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <title>당신의 상쾌한 하루 - 모닝</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/defaults.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/interfaces/login.css')}}">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+</head>
+<body>
+    <div id="header">
+        <div class="top">
+            <span>당신의 상쾌한 하루</span>
+        </div>
+        <div class="bottom">
+            <img src="/static/icons/weather_clear.png">
+            <b>모닝</b>
+        </div>
+    </div>
+    <div id="container">
+        <form action="/login_proc" method="post">
+            <div>
+                <label for="id">ID</label>
+                <input type="text" id="id" name="id">
+            </div>
+            <div>
+                <label for="pw">PW</label>
+                <input type="password" id="pw" name="pw">
+            </div>
+            <button type="submit">로그인</button>
+        </form>
+        <button>
+            <img src="/static/icons/google.png">
+            <span>Google로 로그인</span>
+        </button>
+        <a href="/register">회원가입 하기 >></a>
+    </div>
+</body>
+</html>

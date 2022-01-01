@@ -1,0 +1,263 @@
+.none {
+  display: none;
+  font-size: 14px;
+}
+
+/** header stylesheet **/
+#header {
+  margin-left: 20px;
+  position: relative;
+  top: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#header .top {
+  position: relative;
+  left: 25px;
+}
+#header .top > span {
+  font-size: 20px;
+}
+
+#header .bottom {
+  position: relative;
+  bottom: 15px;
+}
+#header .bottom > img {
+  width: 100px;
+}
+#header .bottom > b {
+  font-size: 50px;
+  position: relative;
+  right: 12px;
+  bottom: 35px;
+}
+
+/** container stylesheet **/
+#container {
+  margin-top: 30px;
+  margin-left: 120px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+#container > .left {
+  margin-right: 32px;
+}
+#container > .left #kbo_league {
+  border: 1px solid #d79100;
+  border-radius: 36px;
+  width: 460px;
+  height: 640px;
+}
+#container > .left #kbo_league > .top {
+  padding-top: 20px;
+  padding-left: 20px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+}
+#container > .left #kbo_league > .top img {
+  margin-right: 10px;
+  width: 60px;
+}
+#container > .left #kbo_league > .top span {
+  font-size: 30px;
+  color: #d79100;
+}
+#container > .left #kbo_league > .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#container > .left #kbo_league > .bottom thead th {
+  padding: 10px 0px;
+}
+#container > .left #kbo_league > .bottom tbody > tr {
+  border-top: 1px solid #e5e5e5;
+}
+#container > .left #kbo_league > .bottom td {
+  padding: 11px 0 8px 0;
+  line-height: 28px;
+  text-align: center;
+}
+#container > .left #kbo_league > .bottom td:first-of-type {
+  width: 120px;
+}
+#container > .left #kbo_league > .bottom td:not(:first-of-type) {
+  width: 50px;
+}
+#container > .right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+#container > .right > div {
+  border: 1px solid #d79100;
+  border-radius: 36px;
+  width: 720px;
+}
+#container > .right > div:not(:last-of-type) {
+  margin-bottom: 28px;
+}
+#container > .right > div > .top {
+  padding-top: 20px;
+  padding-left: 20px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+}
+#container > .right > div > .top img {
+  margin-right: 10px;
+  width: 60px;
+}
+#container > .right > div > .top span {
+  font-size: 30px;
+  color: #d79100;
+}
+#container > .right > div > .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+#container > .right > div > .bottom > div:not(.none) {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 100px;
+  grid-row-gap: 40px;
+}
+#container > .right > div > .bottom > div > .sch_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 240px;
+}
+#container > .right > div > .bottom > div > .sch_box > div {
+  display: flex;
+  flex-direction: column;
+}
+#container > .right > div > .bottom > div > .sch_box .left span {
+  font-size: 18px;
+}
+
+/** floatingButton **/
+#floatingButton {
+  position: absolute;
+  top: 180px;
+  left: 50px;
+}
+#floatingButton > .top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#floatingButton > .top .left {
+  border: 3px solid #f7c96a;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 233, 110, 0.15);
+  cursor: pointer;
+}
+#floatingButton > .top .left span.ico_appbar {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -40px -65px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#floatingButton > .top .right > span {
+  font-size: 30px;
+  color: #f7c96a;
+}
+
+#floatingButton > .bottom {
+  margin-left: 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 50px;
+}
+#floatingButton > .bottom span#ico_down {
+  margin-left: 2px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -95px -76px;
+  background-size: 220px 220px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 233, 110, 0.2);
+  visibility: hidden;
+}
+#floatingButton > .bottom #dropdown span {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#floatingButton > .bottom #dropdown span#ico_home {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px 0px;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_weather {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -48px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_sports {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -40px -75px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_news {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -80px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_settings {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -46px -8px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}

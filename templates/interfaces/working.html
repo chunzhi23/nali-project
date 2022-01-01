@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당신의 상쾌한 하루 - 모닝</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/defaults.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/interfaces/working.css')}}">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <script src="/static/js/time.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="top">
+            <span>당신의 상쾌한 하루</span>
+        </div>
+        <div class="bottom">
+            <img src="/static/icons/weather_clear.png">
+            <b>모닝</b>
+        </div>
+    </div>
+    <div id="container">
+        <div class="time">
+            <span class="text" id="h"></span>
+            <span class="text" id="colon">:</span>
+            <span class="text" id="m"></span>
+            <span class="suffix"></span>
+        </div>
+        <span class="message">모닝이 일하는 중입니다!</span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모닝 - 뉴스</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/defaults.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/pages/news.css')}}">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <script src="/static/js/news_get.js"></script>
+    <script src="/static/js/covid_get.js"></script>
+    <script src="/static/js/stock_get.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="top">
+            <span>당신의 상쾌한 하루</span>
+        </div>
+        <div class="bottom">
+            <img src="/static/icons/weather_clear.png">
+            <b>모닝</b>
+        </div>
+    </div>
+    <div id="container">
+        <div class="left">
+            <div id="news">
+                <div class="top">
+                    <span class="title">최신 뉴스</span>
+                </div>
+                <div id="news_detail" class="bottom">
+                    <div id="pending_news" class="pending"></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div id="stocks">
+                <div class="top">
+                    <span class="title">주식</span>
+                </div>
+                <div class="bottom">
+                    <div id="pending_stk" class="pending"></div>
+                    <table id="stock_table">
+                        <thead>
+                            <th width="150px"></th>
+                            <th width="80px"></th>
+                            <th width="80px"></th>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="confirmed">
+                <div class="top">
+                    <span class="title">확진자 현황</span>
+                </div>
+                <div class="bottom">
+                    <div id="pending_cvd" class="pending"></div>
+                    <span id="data"></span>
+                    <span id="when"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="floatingButton">
+        <div class="top">
+            <div class="left" id="dropMainButton">
+                <span class="ico_appbar"></span>
+            </div>
+            <div class="right">
+                <span class="index">뉴스</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <span id="ico_down"></span>
+            <div id="dropdown">
+                <span id="ico_home"></span>
+                <span id="ico_weather"></span>
+                <span id="ico_sports"></span>
+                <span id="ico_settings"></span>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/dropbar.js"></script>
+</body>
+</html>

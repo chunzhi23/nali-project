@@ -1,0 +1,380 @@
+/** cover stylesheet **/
+#cover {
+  background-color: #000;
+  opacity: 0.4;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.prominent {
+  border-radius: 20px;
+  position: relative;
+  background-color: white;
+  z-index: 20;
+}
+
+/** header stylesheet **/
+#header {
+  margin-left: 20px;
+  position: relative;
+  top: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#header .top {
+  position: relative;
+  left: 25px;
+}
+#header .top > span {
+  font-size: 20px;
+}
+
+#header .bottom {
+  position: relative;
+  bottom: 15px;
+}
+#header .bottom > img {
+  width: 100px;
+}
+#header .bottom > b {
+  font-size: 50px;
+  position: relative;
+  right: 12px;
+  bottom: 35px;
+}
+
+/** container **/
+#container {
+  margin-top: 30px;
+  margin-left: 120px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#container > div:not(:last-of-type) {
+  margin-right: 32px;
+}
+#container div > .main {
+  margin-left: 10px;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+}
+#container div > .main span {
+  font-size: 30px;
+  color: #d79100;
+}
+#container div > .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#container div > .main img {
+  width: 80px;
+}
+#music {
+  border: 1px solid #D79100;
+  border-radius: 20px;
+  width: 400px;
+  height: 640px;
+}
+#img_music {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 210px;
+  height: 210px;
+}
+#img_music #search_box {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+  width: 210px;
+  height: 210px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#img_music:hover #search_box {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+  cursor: pointer;
+}
+#img_music #search_box > img.search {
+  width: 80px;
+  height: 80px;
+}
+#img_music > img.none {
+  width: 80px;
+  height: 80px;
+}
+#img_music > img.thumb {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+}
+#music_inform {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 335px;
+  overflow: hidden;
+  font-family: "KoPubDotumMedium", sans-serif;
+}
+#music_inform > span {display: block;}
+#music_inform > span.title {
+  font-size: 26px;
+  align-self: flex-start;
+}
+#music_inform > span.author {font-size: 16px;}
+#music_table {
+  margin-top: 20px;
+  width: 260px;
+  font-family: "KoPubDotumMedium", sans-serif;
+}
+#music_table > div {
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+#music_table > div > span {font-size: 14px;}
+#music_table > div > span:nth-of-type(1) {font-weight: bold;}
+
+#timeset {
+  border: 1px solid #D79100;
+  border-radius: 20px;
+  width: 310px;
+  height: 640px;
+}
+#timeset > .bottom > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#timeset > .bottom .time {margin-top: 40px;}
+#timeset > .bottom .time > .top {
+  font-size: 80px;
+  color: #D79100;
+}
+#timeset > .bottom .time > .top span {
+  display: inline-block;
+}
+#timeset > .bottom .time > .top input {
+  display: inline-block;
+}
+#timeset > .bottom .time > .top *:not(span.colon) {
+  border: none;
+  width: 80px;
+  font-size: 80px;
+  outline: none;
+  text-align: center;
+}
+#timeset > .bottom .time > .sub {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 25px;
+  font-size: 36px;
+}
+#timeset > .bottom .time > .sub > span.selected {color: #D79100;}
+#timeset > .bottom .time > .sub > span.unselected {color: rgba(0, 0, 0, 0.4);}
+#timeset > .bottom .illuminance {margin-top: 80px;}
+#timeset > .bottom .illuminance > .top {font-size: 24px;}
+#timeset > .bottom .illuminance > .sub {
+  margin-top: 10px;
+  font-size: 36px;
+  color: #d79100;
+}
+#other_settings {
+  border: 1px solid #D79100;
+  border-radius: 20px;
+  width: 420px;
+  height: 310px;
+  position: relative;
+}
+#other_settings > .bottom {margin-top: 10px;}
+#other_settings > .bottom > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 280px;
+}
+#other_settings > .bottom > div > span {cursor: pointer;}
+#other_settings > .bottom > div > span.on {color: #CF1F1F;}
+#other_settings > .bottom > div > span.on::after {content: "ON";}
+#other_settings > .bottom > div > span.off {color: #0059DF;}
+#other_settings > .bottom > div > span.off::after {content: "OFF";}
+#other_settings > .bottom > .set_alarm {
+  margin-top: 20px;
+}
+#other_settings > .bottom #bottomBar {
+  border-radius: 15px;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  background-color: #CF1F1F;
+  cursor: pointer;
+}
+#other_settings > .bottom #bottomBar > span {
+  display: block;
+  line-height: 45px;
+  font-size: 30px;
+  color: white;
+}
+#other_settings > .bottom > div > span {font-size: 30px;}
+#author {
+  margin-top: 20px;
+  border: 1px solid #D79100;
+  border-radius: 20px;
+  width: 420px;
+  height: 310px;
+}
+#author > .bottom {margin-top: 15px;}
+#author > .bottom > div {
+  margin-top: 5px;
+  position: relative;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+#author > .bottom > div > img {width: 60px;}
+#author > .bottom > div > span {
+  font-size: 25px;
+}
+
+
+/** floatingButton **/
+#floatingButton {
+  padding: 5px;
+  height: 635px;
+  position: absolute;
+  top: 180px;
+  left: 50px;
+}
+#floatingButton > .top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+#floatingButton > .top .left {
+  border: 3px solid #f7c96a;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 233, 110, 0.15);
+  cursor: pointer;
+}
+#floatingButton > .top .left span.ico_appbar {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -50px -8px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#floatingButton > .top .right > span {
+  font-size: 30px;
+  color: #f7c96a;
+}
+
+#floatingButton > .bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+}
+#floatingButton > .bottom span#ico_down {
+  margin-left: 2px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -95px -76px;
+  background-size: 220px 220px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255, 233, 110, 0.2);
+  visibility: hidden;
+}
+#floatingButton > .bottom #dropdown span {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#floatingButton > .bottom #dropdown span#ico_home {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px 0px;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_weather {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -48px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_sports {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -40px -75px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_news {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: 0px -80px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}
+#floatingButton > .bottom #dropdown span#ico_settings {
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  background-image: url(/static/icons/appbar.png);
+  background-position: -46px -8px;
+  background-size: 120px 120px;
+  background-repeat: no-repeat;
+}

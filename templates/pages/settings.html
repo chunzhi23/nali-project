@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모닝 - 설정</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/defaults.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/pages/settings.css')}}">
+    <link rel="shortcut icon" href="/static/favicon.ico">
+    <script src="/static/js/jquery.js"></script>
+</head>
+<body>
+    <div id="cover"></div>
+    <div id="header">
+        <div class="top">
+            <span>당신의 상쾌한 하루</span>
+        </div>
+        <div class="bottom">
+            <img src="/static/icons/weather_clear.png">
+            <b>모닝</b>
+        </div>
+    </div>
+    <div id="container">
+		<div id="music">
+            <div class="top main">
+                <img src="/static/icons/quote.png">
+                <span>음악</span>
+            </div>
+            <div class="bottom">
+                <div id="img_music">
+                    <div id="search_box">
+                        <img class="search" src="/static/icons/search_white.png">
+                    </div>
+                    <img class="none" src="/static/icons/search.png"></div>
+                    <div id="music_inform">
+                        <span class="title">- 클릭하여 노래 설정 -</span>
+                        <span class="author"></span>
+                    </div>
+                    <div id="music_table">
+                    <div>
+                        <span>We don't talk anymore</span>
+                        <span>Charlie Puth</span>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div id="timeset">
+            <div class="top main">
+                <img src="/static/icons/setting_alarm.png">
+                <span>시간 설정</span>
+            </div>
+            <div class="bottom">
+                <div class="time">
+                    <div class="top">
+                        <span id="hour">6</span>
+                        <span class="colon">:</span>
+                        <span id="minute">30</span>
+                    </div>
+                    <div class="sub">
+                        <span id="am">AM</span>
+                        <span id="pm">PM</span>
+                    </div>
+                </div>
+                <div class="illuminance">
+                    <div class="top">
+                        <span>조도센서 값:</span>
+                    </div>
+                    <div class="sub">
+                        <span>660</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div id="other_settings" class="prominent">
+                <div class="top main">
+                    <img src="/static/icons/other_settings.png">
+                    <span>기타 설정</span>
+                </div>
+                <div class="bottom">
+                    <div class="dark_mode" title="아직 지원하지 않는 기능입니다">
+                        <span>다크모드</span>
+                        <span class="off"></span>
+                    </div>
+                    <div class="set_alarm" title="지원하지 않는 기능입니다">
+                        <span>알람 울리기</span>
+                        <span id="onoff" class="off"></span>
+                    </div>
+                    <div id="bottomBar">
+                        <span>로그아웃</span>
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.getElementById("bottomBar")
+                .addEventListener("click", function(){
+                    location.href = "/logout_proc";
+                });
+            </script>
+            <div id="author" class="prominent">
+                <div class="top main">
+                    <img src="/static/icons/fennec_fox.png">
+                    <span>만든 사람들</span>
+                </div>
+                <div class="bottom">
+                    <div class="izero1240">
+                        <img src="/static/icons/mail.png">
+                        <span>izero1240@dimigo.hs.kr</span>
+                    </div>
+                    <div class="chunzhi23">
+                        <img src="/static/icons/mail.png">
+                        <span>chunzhi23@dimigo.hs.kr</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="floatingButton" class="prominent">
+        <div class="top">
+            <div class="left" id="dropMainButton">
+                <span class="ico_appbar"></span>
+            </div>
+            <div class="right">
+                <span class="index">설정</span>
+            </div>
+        </div>
+        <div class="bottom">
+            <span id="ico_down"></span>
+            <div id="dropdown">
+                <span id="ico_home"></span>
+                <span id="ico_weather"></span>
+                <span id="ico_sports"></span>
+                <span id="ico_news"></span>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/dropbar.js"></script>
+</body>
+</html>

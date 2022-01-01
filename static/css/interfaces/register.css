@@ -1,0 +1,104 @@
+/** cover stylesheet **/
+#cover .background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+  overflow: hidden;
+  z-index: 100;
+}
+
+/** header stylesheet **/
+#header {
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#header .top {
+  position: relative;
+  right: 60px;
+}
+#header .top span {
+  font-size: 30px;
+}
+#header .bottom {
+  margin-top: 20px;
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+#header .bottom img {
+  position: absolute;
+  right: 110px;
+  width: 280px;
+}
+#header .bottom b {
+  grid-column: 2/3;
+  font-size: 100px;
+}
+
+/** container stylesheet **/
+#container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#container form div {
+  border: 5px solid #f7c96a;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  width: 750px;
+  height: 50px;
+  background-color: white;
+}
+#container form div:focus-within {
+  transition: 0.2s;
+  background-color: rgba(255, 233, 110, 0.2);
+}
+#container form div > label {
+  margin-left: 20px;
+  margin-right: 10px;
+  font-size: 24px;
+}
+#container form div > input {
+  border: none;
+  flex: 1;
+  line-height: 30px;
+  font-size: 24px;
+  background-color: transparent;
+  outline: none;
+}
+#container form div > img.approved {
+  padding-right: 10px;
+  width: 45px;
+}
+#container form div:not(:last-of-type) {
+  margin-bottom: 25px;
+}
+#container form button {
+  margin-top: 20px;
+  padding: 10px 0px;
+  border: none;
+  border-radius: 8px;
+  width: 200px;
+  font-size: 24px;
+  background-color: #f7c96a;
+  cursor: pointer;
+}
