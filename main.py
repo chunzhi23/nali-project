@@ -143,8 +143,8 @@ def parseLoc():
             gc_url = "?request=coordsToaddr&coords=%f,%f&sourcecrs=epsg:4326&orders=admcode,legalcode,addr,roadaddr&output=json" % (lng, lat)
             sum_url = naver_url + gc_url
             naver_headers = {
-                "X-NCP-APIGW-API-KEY-ID": "qhx1gdmw1r", 
-                "X-NCP-APIGW-API-KEY": "Wt4m0Kpg5bZY7PFWPxToJHt05N7ENWYNSw7WtiwJ"
+                "X-NCP-APIGW-API-KEY-ID": "[YOUR API KEY ID]", 
+                "X-NCP-APIGW-API-KEY": "[YOUR API KEY]"
             }
 
             naver_api_test = requests.get(sum_url, headers=naver_headers)
@@ -290,7 +290,7 @@ def parseCOVID():
 @app.route('/parse_youtube/<cmd>')
 def parseYoutube(cmd):
     try:
-        DEVELOPER_KEY = 'AIzaSyBCQDXbFUTVEDCpDXk8QzKvUn4hkMgpeYc'
+        DEVELOPER_KEY = '[YOUR DEVELOPER KEY]'
         YOUTUBE_API_SERVICE_NAME = 'youtube'
         YOUTUBE_API_VERSION = 'v3'
         youtube = build(
